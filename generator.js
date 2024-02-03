@@ -43,7 +43,7 @@ function generar() {
             try {
 
                 const respuesta = await fetch(`https://api.themoviedb.org/3/tv/${serieKey}?api_key=6d9fd0eceda02898513c9454f0b94ccf&language=en-US`);
-                const respuesta3 = await fetch(`https://api.themoviedb.org/3/tv/${serieKey}/season/${seasonNumber}?api_key=6d9fd0eceda02898513c9454f0b94ccf&language==en-US`);
+                const respuesta3 = await fetch(`https://api.themoviedb.org/3/tv/${serieKey}/season/${seasonNumber}?api_key=6d9fd0eceda02898513c9454f0b94ccf&language=en-US`);
     
                 if (respuesta.status === 200) {
                     const datos = await respuesta.json();
