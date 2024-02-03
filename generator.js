@@ -117,13 +117,12 @@ function generar() {
                     let template = document.getElementById('html-final');
     
                     let justHtml = `    
-<div data-post-type="serie" hidden>
+<div data-post-type="series" hidden>
   <img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}" />
   <p id="tmdb-synopsis">${datos.overview}</p>
 </div>
 <!--more-->
 
-<!-- Karasu.builder@v1.1/©karasu-themes -->
 <div class="headline is-small mb-4">
   <h2 class="headline__title">Information</h2>
 </div>
@@ -132,14 +131,15 @@ function generar() {
 <ul class="post-details mb-4"  data-youtube-id='trailerId)'  data-backdrop="https://image.tmdb.org/t/p/w1280/${datos.backdrop_path}" data-imdb="${datos.vote_average.toFixed(1)}">
   <li data="${datos.name}"><span>Title</span>${datos.name}</li>
   <li data-duartion="N/A"><span>Runtime</span>N/A</li>
-  <li data-year="${datos.first_air_date.slice(0,4)}"><span>Ano</span>${datos.first_air_date.slice(0,4)}</li>
-  <li data-duartion="${datos.id}"><span>Id Serie</span>${datos.id}</li>
-  <li data-genres="${tags}"><span>Genero</span>${tags}</li>
+  <li data-year="${datos.first_air_date.slice(0,4)}"><span>Year</span>${datos.first_air_date.slice(0,4)}</li>
+  <li data-duartion="${datos.id}"><span>Series ID</span>${datos.id}</li>
+  <li data-genres="${tags}"><span>Genre</span>${tags}</li>
   
 </ul>
 
 
 <!-- Add additional code on the next line -->
+
 
                     `;
                     
@@ -217,26 +217,25 @@ function generar() {
   <p id="tmdb-synopsis">${datos.overview}</p>
 </div>
 
-<!-- meusite.org@templateina -->
+
 <div class="headline is-small mb-4">
-  <h2 class="headline__title">Informação</h2>
+  <h2 class="headline__title">Information</h2>
 </div>
 <!-- Do not touch any of the data attributes unless you know what you're doing! -->
 <ul class="post-details mb-4" data-backdrop="https://image.tmdb.org/t/p/w1280/${datos.backdrop_path}" data-player-backdrop="https://image.tmdb.org/t/p/w1280/${datos.backdrop_path}" data-imdb="${datos.vote_average.toFixed(1)}">
-  <li data="${datos.title}"><span>Título</span>${datos.title}</li>
-  <li data-original-title="${datos.original_title}"><span>Título original</span>${datos.original_title}</li>
-  <li data-duartion="${convertMinutes(datos.runtime)}"><span>Duração</span>${convertMinutes(datos.runtime)}</li>
-  <li data-year="${datos.release_date.slice(0,4)}"><span>Ano</span>${datos.release_date.slice(0,4)}</li>
-  <li data-release-data="${datos.release_date}"><span>Data de Lançamento:</span>${datos.release_date}</li>
-  <li data-genres="${tags}"><span>Géneros</span>${tags}</li>
+  <li data="${datos.title}"><span>Title</span>${datos.title}</li>
+  <li data-original-title="${datos.original_title}"><span>Original Title</span>${datos.original_title}</li>
+  <li data-duartion="${convertMinutes(datos.runtime)}"><span>Duration</span>${convertMinutes(datos.runtime)}</li>
+  <li data-year="${datos.release_date.slice(0,4)}"><span>Year</span>${datos.release_date.slice(0,4)}</li>
+  <li data-release-data="${datos.release_date}"><span>Release Date:</span>${datos.release_date}</li>
+  <li data-genres="${tags}"><span>Genres</span>${tags}</li>
 </ul>
- 
 
 <div class="plyer-node"></div>
 <script>
 const _SV_LINKS = [
 {
-lang: "IDIOMA",
+lang: "LANGUAGE",
 name: "PLAYER 1",
 quality: "",
 url: "Player",
