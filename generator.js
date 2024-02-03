@@ -109,9 +109,9 @@ function generar() {
                     let genSeasonsCount;
     
                     if (datos.number_of_seasons == 1){
-                        genSeasonsCount = " Temporada"
+                        genSeasonsCount = " Seasons"
                     } else if (datos.number_of_seasons > 1){
-                        genSeasonsCount = " Temporadas"
+                        genSeasonsCount = " Seasons"
                     }
                     
                     let template = document.getElementById('html-final');
